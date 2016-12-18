@@ -1,17 +1,84 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.dolphin.kichuna.Contacts">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Contacts"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:textStyle="bold"
+        android:layout_height="match_parent">
 
-        />
+        <LinearLayout
+            android:id="@+id/activity_developmental"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:weightSum="1">
+
+
+            <TextView
+                android:id="@+id/tEmeregency1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact 1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/eEmergency1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/tEmergency2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Contact 2"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/eEmergency2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/tBlood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood Group"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <Spinner
+                android:id="@+id/sBlood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/bEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Edit" />
+
+            <Button
+                android:id="@+id/bSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sBlood"
+                android:layout_gravity="right"
+                android:text="Save" />
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

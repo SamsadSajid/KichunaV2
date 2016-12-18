@@ -2,12 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dolphin.kichuna">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.camera"></uses-feature>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="com.activeandroid.app.Application"
+        >
+        <meta-data android:name="AA_DB_NAME" android:value="userinfo.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="2" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.example.dolphin.kichuna.User_Info" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,3 +33,7 @@
     </application>
 
 </manifest>
+
+
+
+
